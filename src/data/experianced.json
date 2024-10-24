@@ -1,0 +1,56 @@
+[
+    {
+        "title" : "Freelancer",
+        "place" : "",
+        "year" : "Des 2019 - Present",
+        "task" : [
+            "Developed several dashboard applications using Golang, AngularJS, and Docker as containers for the applications.",
+            "Enhanced new features on existing dashboards using Java.",
+            "Created API services using Golang as the programming language on the server side, with PostgreSQL as the database"
+        ],
+        "category" : "freelance"
+        
+    },
+    {
+        "title" : "Frontend Developer",
+        "place" : "PT. AZEC Indonesia Management Service",
+        "year" : "Jul 2020 - Jun 2021",
+        "task" : [
+            "Developed several dashboard applications using Golang, AngularJS, and Docker as containers for the applications.",
+            "Enhanced new features on existing dashboards using Java.",
+            "Created API services using Golang as the programming language on the server side, with PostgreSQL as the database"
+        ],
+        "category" : "work"
+
+    },
+    {
+        "title" : "Middleware Developer",
+        "place" : "PT Bank Rakyat Indonesia (Persero) Tbk",
+        "year" : "Jul 2021 - Jul 2023",
+        "task" : [
+                "Created RestAPI service in ESB to integrate the requirements between BRI channels and third-party entities.",
+                "Integrated applications with various formats such as JSON, ISO, and WSDL.",
+                "Developed stored procedures in SQL Server.",
+                "Acted as a dedicated middleware programmer for the BRI insurance platform (BRISURF).",
+                "Designed the system's application flow, created API specification documentation, and conducted testing.",
+                "Developed dashboard applications using React.js and Express.js.",
+                "Conducted problem-solving and monitored services using Kibana.",
+                "Implemented technologies such as Redis, Kafka, Elasticsearch, Bitbucket, and Bamboo."
+            ],
+            "category" : "work"
+
+    },
+    
+    {
+        "title" : "IT Specialist - Application Development",
+        "place" : "PT Xsys Solusi Cemerlang",
+        "year" : "Des 2023 - Jun 2024",
+        "task" : [
+            "Develop, testing, analysis custom APP for integration filenet IBM to client's existing app (Mandiri utama finance) with java springboot",
+            "Develop fullstack aplication ecommerce xsys mobilink with next js as a frontend and laravel as a backend",
+            "Design UI/UX lokerlink 2.0 with figma",
+            "Get to know IBM products"
+        ],
+        "category" : "work"
+    }
+]
