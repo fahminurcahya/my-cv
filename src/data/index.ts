@@ -221,7 +221,8 @@ export const socialMedia = [
   },
 ]
 
-type Project = {
+export type Project = {
+  id: number;
   title: string;
   description: string;
   category: string;
@@ -231,11 +232,13 @@ type Project = {
   url: string;
   technology: string[];
   img: string[];
+  type: "project" | "course" | "others";
   features: string[];
 };
 
 export const projects: Project[] = [
   {
+    id: 1,
     title: "E-Ticketing",
     description:
       "This is a project for e-ticketing for participants of the funwalk and funrun organized by Kementrian Investasi/BKPM in order to commemorate the 50th anniversary",
@@ -246,6 +249,7 @@ export const projects: Project[] = [
     url: "The URL is no longer available",
     technology: ["Node Js (Express Js)", "Mysql", "Nginx"],
     img: ["/images/bkpm/1.png", "/images/bkpm/2.png"],
+    type: "project",
     features: [
       "Participant registration for funwalk and funrun",
       "Send Email (registration success notification and ticket)",
@@ -256,6 +260,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 2,
     title: "Full-Stack JavaScript Developer: Website Travel",
     description: "Application for booking places for holidays",
     category: "Web Apps",
@@ -269,12 +274,14 @@ export const projects: Project[] = [
       "/images/staycation/2.png",
       "/images/staycation/3.png",
     ],
+    type: "course",
     features: [
       "Dashboard backoffice (management product, transaction)",
       "Book a place",
     ],
   },
   {
+    id: 3,
     title:
       "Bootcamp Full-Stack Website Developer: Website Doctor Appointment",
     description:
@@ -290,12 +297,14 @@ export const projects: Project[] = [
       "/images/appointment/2.png",
       "/images/appointment/3.png",
     ],
+    type: "course",
     features: [
       "Dashboard backoffice (management user, master data, operational)",
       "Create appointment",
     ],
   },
   {
+    id: 4,
     title:
       "Flutter App Developer: Make a Tinder Application to Find a Match",
     description:
@@ -306,6 +315,7 @@ export const projects: Project[] = [
     pathName: "sarangapps",
     url: "-",
     technology: ["Flutter"],
+    type: "course",
     img: [
       "/images/tinder/1.png",
       "/images/tinder/2.png",
@@ -314,6 +324,7 @@ export const projects: Project[] = [
     features: ["Login & Register", "Find & Add People"],
   },
   {
+    id: 5,
     title: "Whatsapp Sitcker Apps",
     description:
       "Application for adding WhatsApp stickers and implementing several AdMob such as, interstitial, native and banner, this application is also integrated with Google Firebase analytics to analyze application users, there are many applications that have been published on Playstore and have more than 100k installers",
@@ -323,6 +334,7 @@ export const projects: Project[] = [
     pathName: "stickerwa",
     url: "https://play.google.com/store/search?q=pub%3Amiddleearth%20dev&c=apps&hl=id-ID",
     technology: ["Java", "Admob", "Firebase Analytics"],
+    type: "project",
     img: [
       "/images/stickerwa/1.png",
       "/images/stickerwa/2.png",
@@ -331,6 +343,7 @@ export const projects: Project[] = [
     features: ["Add sticker packs to WhatsApp"],
   },
   {
+    id: 6,
     title: "KasirBersama",
     description:
       "This is an online cashier application project built for product and point of sale management needs",
@@ -347,6 +360,7 @@ export const projects: Project[] = [
       "3rd party (midtrans)",
     ],
     img: ["/images/kasir/1.png", "/images/kasir/2.png"],
+    type: "project",
     features: [
       "Web Dashboard",
       "Store Management",
@@ -360,6 +374,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 7,
     title: "Dart Programming to Prepare to Learn Flutter",
     description: "",
     category: "Basic programming language",
@@ -369,9 +384,11 @@ export const projects: Project[] = [
     url: "",
     technology: ["Dart"],
     img: ["/images/course/1.png"],
+    type: "course",
     features: [],
   },
   {
+    id: 8,
     title: "Adobe Illustration: How To Create Icon For UI",
     description: "",
     category: "Basic Design",
@@ -381,9 +398,11 @@ export const projects: Project[] = [
     url: "",
     technology: ["Adobe Ilustration"],
     img: ["/images/course/2.png"],
+    type: "course",
     features: [],
   },
   {
+    id: 9,
     title: "Learn Adobe Illustrator: How to Become a Design Artist",
     description: "",
     category: "Basic Design",
@@ -393,9 +412,11 @@ export const projects: Project[] = [
     url: "",
     technology: ["Adobe Ilustration"],
     img: ["/images/course/3.png"],
+    type: "course",
     features: [],
   },
   {
+    id: 10,
     title: "CSS Website Design",
     description: "",
     category: "Basic programming language",
@@ -405,9 +426,11 @@ export const projects: Project[] = [
     url: "",
     technology: ["CSS", "HTML"],
     img: ["/images/course/4.png"],
+    type: "course",
     features: [],
   },
   {
+    id: 11,
     title: "Website Undangan Digital (begather.id)",
     description: "",
     category: "Web Apps",
@@ -421,6 +444,7 @@ export const projects: Project[] = [
       "/images/undangan/2.png",
       "/images/undangan/3.png",
     ],
+    type: "project",
     features: [
       "Consumer Dashboard",
       "Visitor Report",
@@ -437,6 +461,7 @@ export const projects: Project[] = [
     ],
   },
   {
+    id: 12,
     title: "Website SSC Karawang",
     description: "",
     category: "Web Apps",
@@ -446,6 +471,7 @@ export const projects: Project[] = [
     url: "-",
     technology: ["PHP (Laravel)", "MySql"],
     img: ["/images/ssc/1.png", "/images/ssc/2.png"],
+    type: "project",
     features: [
       "Company Profile",
       "Dashboard Admin/Teacher",
@@ -456,6 +482,76 @@ export const projects: Project[] = [
       "Report Results Report",
       "Online Tryout PG/Essay",
     ],
+  },
+  {
+    id: 13,
+    title: "IBM Certification",
+    description: "Guardium Data Protection Technical Sales Intermediate",
+    category: "certification",
+    client: " - ",
+    year: "19 Feb 2024",
+    pathName: "-",
+    url: "-",
+    technology: [],
+    img: ["/cer/Guardium_Data_Protection_Technical_Sales_Intermediate_Badge20240222-31-w3zjtd.jpg"],
+    type: "others",
+    features: [],
+  },
+  {
+    id: 14,
+    title: "IBM Certification",
+    description: "IBM Guardium Foundations",
+    category: "certification",
+    client: " - ",
+    year: "20 Feb 2024",
+    pathName: "-",
+    url: "-",
+    technology: [],
+    img: ["/cer/IBM_Guardium_Foundations_Badge20240222-37-uyxjzj.jpg"],
+    type: "others",
+    features: [],
+  },
+  {
+    id: 15,
+    title: "IBM Certification",
+    description: "Maximo Application Suite Sales Foundation",
+    category: "certification",
+    client: " - ",
+    year: "22 Feb 2024",
+    pathName: "-",
+    url: "-",
+    technology: [],
+    img: ["/cer/Maximo_Application_Suite_Sales_Foundation_Badge20240222-29-m6ro38.jpg"],
+    type: "others",
+    features: [],
+  },
+  {
+    id: 16,
+    title: "IBM Certification",
+    description: "Maximo Application Suite Technical Sales Intermediate",
+    category: "certification",
+    client: " - ",
+    year: "22 Feb 2024",
+    pathName: "-",
+    url: "-",
+    technology: [],
+    img: ["/cer/Maximo_Application_Suite_Technical_Sales_Intermediate_Badge20240222-29-hf744f.jpg"],
+    type: "others",
+    features: [],
+  },
+  {
+    id: 17,
+    title: "IBM Certification",
+    description: "Maximo Visual Inspection Technical Sales Intermediate",
+    category: "certification",
+    client: " - ",
+    year: "22 Feb 2024",
+    pathName: "-",
+    url: "-",
+    technology: [],
+    img: ["/cer/Maximo_Visual_Inspection_Technical_Sales_Intermediate_Badge20240222-37-nimshs.jpg"],
+    type: "others",
+    features: [],
   },
 
   // Company profile ssc karawang,

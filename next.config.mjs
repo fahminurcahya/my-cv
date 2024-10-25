@@ -6,5 +6,9 @@ const config = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  images: {
+    domains: ["assets.aceternity.com"], // Add your external image domain here
+  },
 };
+
 export default config;
