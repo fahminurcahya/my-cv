@@ -6,9 +6,7 @@ import { BentoGrid, BentoGridItem } from "./ui/bento-grid";
 import { cn } from "@/lib/utils";
 import { SkeletonThree } from "./ui/skeleton";
 import { IconSignature } from "@tabler/icons-react";
-import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import Image from "next/image";
 import { ModalDetail } from "./modal-detail";
 
 

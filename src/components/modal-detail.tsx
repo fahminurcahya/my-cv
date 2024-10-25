@@ -32,13 +32,33 @@ export function ModalDetail({ id, setActive, data }: {
             <AnimatePresence>
                 {data && typeof data === "object" ? (
                     <div className="fixed inset-0  grid place-items-center z-[100]">
+                        <motion.button
+                            key={`button-${data.id}-${id}`}
+                            layout
+                            initial={{
+                                opacity: 0,
+                            }}
+                            animate={{
+                                opacity: 1,
+                            }}
+                            exit={{
+                                opacity: 0,
+                                transition: {
+                                    duration: 0.05,
+                                },
+                            }}
+                            className="flex absolute top-2 right-2 lg:hidden items-center justify-center bg-white rounded-full h-6 w-6 z-[120]"
+                            onClick={() => setActive(null)}
+                        >
+                            <CloseIcon />
+                        </motion.button>
                         <motion.div
                             layoutId={`card-${data.id}-${id}`}
                             ref={ref}
                             className="w-full max-w-4xl h-full md:h-fit md:max-h-[95%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-hidden pb-4"
                         >
                             <motion.div layoutId={`image-${data.title}-${id}`}>
-                                <ImagesSlider className={cn(data.type == "others" ? "h-[600px]" : "h-96", "object - cover object - top")} images={data.img}
+                                <ImagesSlider className={cn(data.type == "others" ? "h-[350px] sm:h-[550px] md:h-[600px] " : "h-52 sm:h-72 md:h-96", "object - cover object - top")} images={data.img}
                                 >
                                     <motion.div>
 
@@ -102,4 +122,39 @@ export function ModalDetail({ id, setActive, data }: {
 
         </>
     );
+
 }
+
+const CloseIcon = () => {
+    return (
+        <motion.svg
+            initial={{
+                opacity: 0,
+            }}
+            animate={{
+                opacity: 1,
+            }}
+            exit={{
+                opacity: 0,
+                transition: {
+                    duration: 0.05,
+                },
+            }}
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="h-4 w-4 text-black"
+        >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M18 6l-12 12" />
+            <path d="M6 6l12 12" />
+        </motion.svg>
+    );
+};
+
