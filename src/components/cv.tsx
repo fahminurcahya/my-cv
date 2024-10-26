@@ -15,43 +15,20 @@ const Cv = ({ isGenerate }: { isGenerate?: boolean }) => {
 
     const downloadPDF = async () => {
         setIsLoading(true);
-        const htmlContent = `
-        <!DOCTYPE html>
-        <html>
-        <head>
-         <style>
-            p {
-            line-height: 7.5; /* Improve readability */
-            }
-          </style>
-        </head>
-          <body>
-            ${document.getElementById("pdf-content")?.innerHTML}
-          </body>
-        </html>
-      `;
         try {
-            const response = await fetch("/api/generate-pdf", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ htmlContent }),
-            });
-
-            if (response.ok) {
-                const blob = await response.blob();
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement("a");
-                a.href = url;
-                a.download = "generated-document.pdf";
-                a.click();
-                window.URL.revokeObjectURL(url);
-            } else {
-                console.error("Failed to generate PDF");
+            const response = await fetch('/CV_FAHMI_NURCAHYA.pdf');
+            if (!response.ok) {
+                throw new Error('Failed to fetch PDF');
             }
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'CV_FAHMI_NURCAHYA.pdf';
+            link.click();
+            window.URL.revokeObjectURL(url);
         } catch (error) {
-            console.error("Error generating PDF:", error);
+            console.error('Error downloading PDF:', error);
         } finally {
             setIsLoading(false);
         }
@@ -80,8 +57,7 @@ const Cv = ({ isGenerate }: { isGenerate?: boolean }) => {
                     <p className="text-sm text-gray-400">{profile.title}</p>
                     {!isGenerate && (
                         <button
-                            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded inline-flex items-center"
-                            id="download-button"
+                            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded inline-flex items-center hover:bg-blue-700 transition duration-300"
                             onClick={downloadPDF}
                             disabled={isLoading}
                         >
@@ -91,11 +67,11 @@ const Cv = ({ isGenerate }: { isGenerate?: boolean }) => {
                                         <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                                         <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                                     </svg>
-                                    Generating...
+                                    Downloading...
                                 </>
                             ) : (
                                 <>
-                                    <FaFileDownload className="mr-2" /> Download PDF
+                                    <FaFileDownload className="mr-2" /> Download CV
                                 </>
                             )}
                         </button>
