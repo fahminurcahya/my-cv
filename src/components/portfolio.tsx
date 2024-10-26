@@ -21,7 +21,6 @@ const Portfolio = () => {
     const ref = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
-        console.log(active)
         function onKeyDown(event: KeyboardEvent) {
             if (event.key === "Escape") {
                 setActive(false);

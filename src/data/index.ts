@@ -1,108 +1,11 @@
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
   { name: "Testimonials", link: "#testimonials" },
   { name: "Contact", link: "#contact" },
 ];
-
-export const gridItems = [
-  {
-    id: 1,
-    title: "I prioritize client collaboration, fostering open communication ",
-    description: "",
-    className: "lg:col-span-3 md:col-span-6 md:row-span-4 lg:min-h-[60vh]",
-    imgClassName: "w-full h-full",
-    titleClassName: "justify-end",
-    img: "/b1.svg",
-    spareImg: "",
-  },
-  {
-    id: 2,
-    title: "I'm very flexible with time zone communications",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 3,
-    title: "My tech stack",
-    description: "I constantly try to improve",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-2",
-    imgClassName: "",
-    titleClassName: "justify-center",
-    img: "",
-    spareImg: "",
-  },
-  {
-    id: 4,
-    title: "Tech enthusiast with a passion for development.",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-start",
-    img: "/grid.svg",
-    spareImg: "/b4.svg",
-  },
-
-  {
-    id: 5,
-    title: "Currently building a JS Animation library",
-    description: "The Inside Scoop",
-    className: "md:col-span-3 md:row-span-2",
-    imgClassName: "absolute right-0 bottom-0 md:w-96 w-60",
-    titleClassName: "justify-center md:justify-start lg:justify-center",
-    img: "/b5.svg",
-    spareImg: "/grid.svg",
-  },
-  {
-    id: 6,
-    title: "Do you want to start a project together?",
-    description: "",
-    className: "lg:col-span-2 md:col-span-3 md:row-span-1",
-    imgClassName: "",
-    titleClassName: "justify-center md:max-w-full max-w-60 text-center",
-    img: "",
-    spareImg: "",
-  },
-];
-
-
-export const testimonials = [
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-];
-
 
 
 export const workExperience =
@@ -112,6 +15,7 @@ export const workExperience =
       title: "Freelancer",
       place: "",
       year: "Des 2019 - Present",
+      client: "-",
       task: [],
       category: "freelance",
       desc: "Developed various applications using diverse technologies.",
@@ -120,8 +24,22 @@ export const workExperience =
     },
     {
       id: 2,
+      title: "Bootcamp Java Developer",
+      place: "",
+      year: "Des 2019 - Jun 2020",
+      client: "PT Xsis Mitra Utama",
+      task: ["Bootcamp as a java developer"],
+      category: "bootcamp",
+      desc: "Bootcamp as a java developer.",
+      className: "md:col-span-2",
+      thumbnail: "-",
+    },
+    {
+      id: 3,
       title: "Frontend Developer",
       place: "PT. AZEC Indonesia Management Service",
+      client:
+        "PT Xsis Mitra Utama, placement at PT AZEC Indonesia Management Service",
       year: "Jul 2020 - Jun 2021",
       task: [
         "Developed several dashboard applications using Golang, AngularJS, and Docker as containers for the applications.",
@@ -135,9 +53,10 @@ export const workExperience =
 
     },
     {
-      id: 3,
+      id: 4,
       title: "Middleware Developer",
       place: "PT Bank Rakyat Indonesia (Persero) Tbk",
+      client: "PT Xsis Mitra Utama, placement at PT Bank Rakyat Indonesia",
       year: "Jul 2021 - Jul 2023",
       task: [
         "Created RestAPI service in ESB to integrate the requirements between BRI channels and third-party entities.",
@@ -157,9 +76,10 @@ export const workExperience =
     },
 
     {
-      id: 4,
+      id: 5,
       title: "IT Specialist - Application Development",
       place: "PT Xsys Solusi Cemerlang",
+      client: "PT Xsys Solusi Cemerlang",
       year: "Des 2023 - Jun 2024",
       task: [
         "Develop, testing, analysis custom APP for integration filenet IBM to client's existing app (Mandiri utama finance) with java springboot",
@@ -177,47 +97,55 @@ export const workExperience =
 export const skills = {
   webApps: {
     frontend: [
-      "HTML5",
-      "CSS",
-      "Bootstrap",
-      "Javascript",
-      "Typescript",
-      "ReactJs",
-      "AngularJS (ES5/ES6)"
+      "HTML / CSS",
+      "Javascript / Typescript",
+      "React Js",
+      "Angular JS",
+      "Dart (Flutter)",
+      "Kotlin"
     ],
     backend: [
-      "Node Js",
-      "Express Js (ES5/ES6)",
+      "Node Js (Express / Nest / Hono)",
       "PHP (Laravel)",
       "Golang",
       "Java (Spring Boot)",
-      "Dart",
-      "Flutter"
     ],
-    databases: [
+    others: [
       "MySQL",
       "SQL Server",
       "PostgreSQL",
       "MongoDB",
-      "Redis"
-    ]
+      "Elastic Search",
+      "Redis",
+      "AWS EC2",
+      "Kafka"
+    ],
   },
   mobileApps: {
-    frameworks: ["Dart", "Flutter"],
+    frameworks: ["Kotlin", "Dart (Flutter)"],
   }
 }
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg",
+    platform: "github",
+    icn: FaGithub,
+    link: "https://github.com/fahminurcahya",
+    username: "fahminurcahya"
   },
   {
     id: 2,
-    img: "/twit.svg",
+    platform: "linkedin",
+    icn: FaLinkedin,
+    link: "https://www.linkedin.com/in/fahmi-nurcahya-117056153",
+    username: "fahminurcahya"
   },
   {
     id: 3,
-    img: "/link.svg",
+    platform: "instagram",
+    icn: FaInstagram,
+    link: "https://www.instagram.com/fahminurcahya",
+    username: "@fahminurcahya"
   },
 ]
 
@@ -559,5 +487,26 @@ export const projects: Project[] = [
   // platform undangan digital,
   // kasir mobile
 ];
+
+export const educations = [
+  {
+    title: "Bechelor of Informatic Engineering",
+    university: "University Of Singaperbangsa Karawang",
+    year: "2015-2019"
+  }
+]
+
+export const profile = {
+  name: "Fahmi Nurcahya",
+  title: "Software Engineer",
+  bio: "+4 years of experience as a software engineer, skilled in designing, developing, and managing efficient and reliable software solutions. I possess a deep understanding of modern programming languages, software architecture, and best practices in application development. I contribute to complex and high-quality software development projects that meet client needs, and I am committed to continuously learning and growing in the field of technology",
+  map: "Karawang, Indonesia",
+  mail: "fahminurcahya@gmail.com",
+  whatsapp: "+6285718456591"
+}
+
+
+
+
 
 

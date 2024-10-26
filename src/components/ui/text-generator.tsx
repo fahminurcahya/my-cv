@@ -13,7 +13,6 @@ export const TextGenerateEffect = ({
     const [scope, animate] = useAnimate();
     let wordsArray = words.split(" ");
     useEffect(() => {
-        console.log(wordsArray);
         animate(
             "span",
             {
@@ -30,7 +29,6 @@ export const TextGenerateEffect = ({
         return (
             <motion.div ref={scope}>
                 {wordsArray.map((word, idx) => {
-                    console.log(word)
                     return (
                         <motion.span
                             key={word + idx}

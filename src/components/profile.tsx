@@ -75,7 +75,7 @@ const Profile = () => {
                     />
                 </div>
 
-                <a href="#about">
+                <a href="/cv">
                     <MagicButton
                         title="Download My CV"
                         icon={<FaLocationArrow />}

@@ -24,7 +24,7 @@ const Skill = () => {
                     speed="normal"
                 />
                 <InfiniteMovingCards
-                    items={skills.webApps.databases}
+                    items={skills.webApps.others}
                     direction="right"
                     speed="normal"
                 />
