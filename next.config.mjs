@@ -9,6 +9,9 @@ const config = {
   images: {
     domains: ["assets.aceternity.com"], // Add your external image domain here
   },
+  experimental: {
+    missingSuspenseWithCSRBailout: false,
+  },
 };
 
 export default config;
