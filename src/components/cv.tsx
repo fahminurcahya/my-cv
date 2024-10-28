@@ -31,37 +31,37 @@ const Cv = ({ isGenerate }: { isGenerate?: boolean }) => {
         </html>
       `;
         try {
-            const response = await fetch("/api/generate-pdf", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ htmlContent }),
-            });
+            // const response = await fetch("/api/generate-pdf", {
+            //     method: "POST",
+            //     headers: {
+            //         "Content-Type": "application/json",
+            //     },
+            //     body: JSON.stringify({ htmlContent }),
+            // });
 
-            if (response.ok) {
-                const blob = await response.blob();
-                const url = window.URL.createObjectURL(blob);
-                const a = document.createElement("a");
-                a.href = url;
-                a.download = "generated-document.pdf";
-                a.click();
-                window.URL.revokeObjectURL(url);
-            } else {
-                console.error("Failed to generate PDF");
-            }
-
-            // const response = await fetch('/CV_FAHMI_NURCAHYA.pdf');
-            // if (!response.ok) {
-            //     throw new Error('Failed to fetch PDF');
+            // if (response.ok) {
+            //     const blob = await response.blob();
+            //     const url = window.URL.createObjectURL(blob);
+            //     const a = document.createElement("a");
+            //     a.href = url;
+            //     a.download = "generated-document.pdf";
+            //     a.click();
+            //     window.URL.revokeObjectURL(url);
+            // } else {
+            //     console.error("Failed to generate PDF");
             // }
-            // const blob = await response.blob();
-            // const url = window.URL.createObjectURL(blob);
-            // const link = document.createElement('a');
-            // link.href = url;
-            // link.download = 'CV_FAHMI_NURCAHYA.pdf';
-            // link.click();
-            // window.URL.revokeObjectURL(url);
+
+            const response = await fetch('/CV_FAHMI_NURCAHYA.pdf');
+            if (!response.ok) {
+                throw new Error('Failed to fetch PDF');
+            }
+            const blob = await response.blob();
+            const url = window.URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = 'CV_FAHMI_NURCAHYA.pdf';
+            link.click();
+            window.URL.revokeObjectURL(url);
         } catch (error) {
             console.error("Error generating PDF:", error);
         } finally {
