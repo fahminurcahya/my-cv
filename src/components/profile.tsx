@@ -6,24 +6,24 @@ import { TextGenerateEffect } from "./ui/text-generator";
 import { FaLocationArrow } from "react-icons/fa6";
 import { IconBrandGithub, IconBrandInstagram } from "@tabler/icons-react";
 import { FloatingDock } from "./ui/floating-dock";
+import { socialMedia } from "@/data"; // Import data social media
 
 
 const Profile = () => {
-    const links = [
+    const socials = [
         {
             title: "Instagram",
             icon: (
                 <IconBrandInstagram className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "https://www.instagram.com/fahminurcahya", // Link Instagram langsung
         },
-
         {
             title: "GitHub",
             icon: (
                 <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
             ),
-            href: "#",
+            href: "https://github.com/fahminurcahya", // Link GitHub langsung
         },
     ];
 
@@ -71,7 +71,7 @@ const Profile = () => {
                 <div className="flex items-center justify-center w-full">
                     <FloatingDock
                         mobileClassName="translate-y-20" // only for demo, remove for production
-                        items={links}
+                        items={socials}
                     />
                 </div>
 
@@ -88,4 +88,3 @@ const Profile = () => {
 }
 
 export default Profile;
-
